@@ -1,0 +1,11 @@
+{
+    "name": "database",
+    "license": "MIT",
+    "scripts": {
+        "init": "cp .env.example .env",
+        "dev": "supabase stop && supabase start && dbmate up",
+        "db:migrate": "dbmate up",
+        "db:migrate:down": "dbmate down",
+        "db:migrate:make": "dbmate new"
+    }
+}

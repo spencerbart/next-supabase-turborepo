@@ -1,0 +1,30 @@
+{
+  "name": "global_education_allies",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "stop": "cd apps/database && supabase stop",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "db:migrate": "cd apps/database && dbmate up",
+    "db:migrate:down": "cd apps/database && dbmate down",
+    "db:migrate:make": "cd apps/database && dbmate new"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "packageManager": "npm@8.11.0"
+}
